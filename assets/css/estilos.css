@@ -143,7 +143,7 @@ header nav .interiores:visited {
   }
   header .burger.tache:after {
     transform: rotate(45deg);
-    bottom: 10px;
+    bottom: 11px;
   }
   header .burger.tache:before {
     transform: rotate(-45deg);
@@ -309,6 +309,9 @@ footer .containerFooter .footbloq span {
 .descHome .boxSearch .ctaGral {
   margin: 0 0 0 5%;
 }
+.descHome .testimoniosIn {
+  background-color: transparent !important;
+}
 
 @media screen and (max-width: 991px) {
   .descHome {
@@ -328,22 +331,29 @@ footer .containerFooter .footbloq span {
   background-size: cover;
   background-attachment: fixed;
 }
-.testimonios .card {
+.testimonios .testimoniosIn {
+  width: 90%;
+  margin: auto;
+  background-color: rgba(81, 44, 44, 0.8705882353);
+  backdrop-filter: blur(6px);
+  padding: 2%;
+}
+.testimonios .testimoniosIn .card {
   position: relative;
   background-color: rgba(237, 237, 237, 0.6705882353);
   backdrop-filter: blur(8px);
   width: 24%;
   transition: all 0.4s ease;
 }
-.testimonios .card:hover {
+.testimonios .testimoniosIn .card:hover {
   transform: scale(1.05);
 }
-.testimonios .card img {
+.testimonios .testimoniosIn .card img {
   width: 55%;
   left: 45%;
   position: relative;
 }
-.testimonios .card h5 {
+.testimonios .testimoniosIn .card h5 {
   position: absolute;
   background-color: rgba(94, 94, 94, 0.831372549);
   top: 10%;
@@ -356,7 +366,7 @@ footer .containerFooter .footbloq span {
   color: #fff;
   backdrop-filter: blur(8px);
 }
-.testimonios .card p {
+.testimonios .testimoniosIn .card p {
   color: #686868;
   text-align: right;
   font-size: 13px;
@@ -364,20 +374,20 @@ footer .containerFooter .footbloq span {
 }
 
 @media screen and (max-width: 991px) {
-  .testimonios .card {
+  .testimonios .testimoniosIn .card {
     width: 45%;
   }
-  .testimonios .card img {
+  .testimonios .testimoniosIn .card img {
     width: 100%;
     left: 0;
   }
-  .testimonios .card h5 {
+  .testimonios .testimoniosIn .card h5 {
     width: 100%;
     top: 0;
     position: relative;
     text-align: center;
   }
-  .testimonios .card p {
+  .testimonios .testimoniosIn .card p {
     text-align: left;
   }
 }
