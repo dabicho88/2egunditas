@@ -1,0 +1,50 @@
+@use '../base/variables' as *;
+/*Footer*/
+footer{
+    margin:0 auto;
+    max-width: 1320px;
+    .containerFooter{
+        background-color: $colorAmarilo;
+        box-shadow: $boxShadow;
+        .footbloq{
+            &:nth-of-type(2){
+                align-items: flex-end;
+                justify-content: flex-end;
+                display: flex;
+                flex-wrap: wrap;
+                border-top: 2px solid #0b0fb6;
+            }
+            a{
+                display: block;
+                width: 100%;
+                height: auto;
+                font-size: 19px;
+                line-height: 22px;
+                color: #4a4a4a;
+            }
+            img{
+                display: block;
+                width: 100%;
+                max-width: 200px;
+                margin: 0;
+                padding: 0;
+                filter: invert(1);
+            }
+            span{
+                font-family: $bold;
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px){
+footer{
+    .containerFooter{
+        .footbloq{
+            img{
+                margin: 0 5px 0 0;
+            }
+        }
+    }
+}
+}
+/*Footer*/

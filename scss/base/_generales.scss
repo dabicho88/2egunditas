@@ -1,0 +1,55 @@
+@use '../base/variables' as *;
+/*Generales*/
+@font-face {
+	font-family: 'interbold';
+	src: url('inter-bold-webfont.woff2') format('woff2'),
+		url('inter-bold-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+@font-face {
+	font-family: 'interregular';
+	src: url('inter-regular-webfont.woff2') format('woff2'),
+		url('inter-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+body{
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	font-family: $regular;
+	background: #262626;
+	background: linear-gradient(180deg, #262626 0%, #4a4a4a 100%);
+	background-repeat: no-repeat;
+	strong{
+		font-weight: normal;
+	}
+	a{
+	text-decoration: none;
+		&:visited{
+			text-decoration: none;
+		}
+	}
+	.titulosG{
+		color:#fff;
+		font-family: $bold;
+		font-size: 40px;
+		line-height:43px;
+		margin-bottom: 30px;
+		margin-top: 30px;
+	}
+    .subtitulo{
+        margin-top: 30px;
+    }
+	.containerGral{
+		background-color: #929292;
+		max-width: 1320px;
+		margin:60px auto;
+		box-shadow: $boxShadow;
+	}
+}
+/*Generales*/

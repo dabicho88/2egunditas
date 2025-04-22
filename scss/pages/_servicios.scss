@@ -1,0 +1,115 @@
+@use '../base/variables' as *;
+/*Servicios*/
+.servicios{
+    display: flex;
+    flex-wrap: wrap;
+    .ilust{
+        width: 50%;
+        height: auto;
+        margin: 60px 0 0 60px;
+        padding: 0;
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .explServ{
+        display: block;
+        width: 50%;
+        padding: 22px;
+        height: auto;
+        position: relative;
+        margin: 100px 0px 60px -100px;
+        background-color: #512c2cde;
+        backdrop-filter: blur(6px);
+        p{
+            color: #fff;
+            font-size: 15px;
+            line-height: 19px;
+        }
+    }
+    .fullserv{
+        width: 80%;
+        margin: 0px auto 0 auto;
+        + .explServ{
+            width: 100%;
+            left: 0;
+            margin: -100px auto 60px auto;
+            max-width: 770px;
+        }
+    }
+}
+.servGrid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 17vw 17vw 17vw;
+    grid-template-areas: 
+    "uno . dos . ."
+    ". tres . cuatro ."
+    ". . . . cinco";
+    margin: 60px auto;
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        font-family: $bold;
+        text-align: center;
+        color: #686868;
+        box-shadow: $boxShadow;
+        transition: $transicionGral;
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+    .one {  
+        background-color:$colorAmarilo;
+        grid-area: uno;
+    }
+    .two {  
+        background-color:$colorAmarilo;
+        grid-area: dos;
+    }
+    .three {
+        background-color:$colorAmarilo;
+        grid-area: tres;
+    }
+    .four { 
+        background-color:$colorAmarilo;
+        grid-area: cuatro;
+    }
+    .five { 
+        background-color:$colorAmarilo;
+        grid-area: cinco;
+    }
+}
+@media screen and (max-width: 991px){
+.servicios{
+    .ilust{
+        width: 70%;
+        margin: 60px auto;
+    }
+    .explServ{
+        width: 80%;
+        margin:-20vw auto 60px 10%;
+    }
+    .fullserv{
+        width: 100%;
+    }
+}
+.servGrid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 20vw 20vw 20vw 20vw 20vw;
+    grid-template-areas: 
+    ". uno ."
+    "dos . tres"
+    ". cuatro ."
+    "cinco . .";
+}
+}
+/*Servicios*/

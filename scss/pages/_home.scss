@@ -1,0 +1,85 @@
+@use '../base/variables' as *;
+/*Home*/
+.descHome{
+	background-image: url(../img/bgHome.png)!important;
+	background-repeat: no-repeat;
+	background-position: right 0%!important;
+	background-size: auto!important;
+	background-attachment: fixed;
+	h2{
+		color:#fff;
+		font-family: $regular;
+		font-size: 19px;
+		line-height:21px;
+	}
+	.boxSearch{
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		height:auto;
+		position: relative;
+		.inputGuia{
+			display: block;
+			width: 100%;
+			height: auto;
+			margin: 28px 0;
+			padding: 12px;
+			box-sizing: border-box;
+			border: 2px dashed #fff;
+			stroke: unset;
+			background-color: transparent;
+			border-radius: 12px;
+			color: #fff;
+			&::placeholder{
+				color: #b7b7b7;
+				text-decoration: underline;
+			}
+			&::focus{
+				color: #fff;
+			}
+		}
+		[for*="tuGuia"]{
+			position: absolute;
+			right: 10px;
+			top: 40px;
+			margin: auto;
+			width: 30px;
+			img{
+				position: relative;
+				display: block;
+				width:100%;
+				height:auto;
+			}
+		}
+		button{
+			display: inline-block;
+			stroke: none;
+			border: 1px solid #fff;
+			background-color: transparent;
+			color: #fff;
+			border-radius: 12px;
+			box-sizing: content-box;
+			width: calc(45% - 2px);
+			margin-right: 5%;
+			font-size: 14px;
+			padding: 6px 0;
+			transition: $transicionGral;
+			font-family: $bold;
+			&:hover{
+				opacity: .7;
+			}
+		}
+		.ctaGral{
+			margin:0 0 0 5%;
+		}
+	}
+}
+@media screen and (max-width: 991px){
+.descHome{
+	padding-top: 50vw;
+	background-attachment: local!important;
+	background-size: 50vw!important;
+	background-position: center top!important;
+}
+}
+/*Home*/

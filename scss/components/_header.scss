@@ -1,0 +1,122 @@
+@use '../base/variables' as *;
+/*Header*/
+header{
+	margin:0 auto;
+	max-width: 1320px;
+	.logoPrincipal{
+		display: block;
+		height: auto;
+		transition: $transicionGral;
+		&:hover{
+			opacity: .7;
+		}
+		img{
+			display: block;
+			width:100%;
+			height: auto;
+			margin: 0;
+			padding: 0;
+		}
+	}
+	.burger{
+		display: none;
+	}
+	nav{
+		display: flex;
+		flex-wrap:wrap;
+		align-items: center;
+		align-content:center;
+		justify-content:flex-end;
+		transition: $transicionGral;
+		.interiores{
+			display: block;
+			width:20%;
+			padding:8px;
+			height:auto;
+			color:#fff;
+			font-size:15px;
+			transition: $transicionGral;
+			text-align: center;
+  			cursor:pointer;
+  			&:hover{
+  				opacity:.7;
+  			}
+  			&:visited{
+				color:#fff;
+  			}
+		}
+	}
+}
+@media screen and (max-width:991px ){
+header{
+	margin:0 auto;
+	max-width: 1320px;
+	.logoPrincipal{
+		max-width: 55%;
+	}
+	.burger{
+		width: 60px;
+		height: 60px;
+		right: 15px;
+		position: fixed;
+		border-radius: 0px;
+		display: flex;
+		align-content: space-evenly;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		z-index: 4;
+		transition:.25s all ease;
+		cursor: pointer;
+		backdrop-filter: blur(6px);
+		background-color:#ffffff00;
+		&:after{
+			content:'';
+			width: 80%;
+			height: 3px;
+			display: block;
+			background-color: #f4f007;
+			position: relative;
+			transition:.25s all ease;
+		}
+		&:before{
+			content:'';
+			width: 80%;
+			height: 3px;
+			display: block;
+			background-color: #f4f007;
+			position: relative;
+			transition:.25s all ease;
+		}
+    }
+    .burger.tache{
+		&:after{
+			transform: rotate(45deg);
+			bottom: 11px;
+		}
+		&:before{
+			transform: rotate(-45deg);
+			top: 10px;
+		}
+    }
+	nav{
+		justify-content: center;
+		bottom: -100%;
+		position: fixed;
+		height: 100%;
+		left: 0;
+		z-index: 3;
+		background-color: rgba(81, 44, 44, 0.8705882353);
+		backdrop-filter: blur(6px);
+		.interiores{
+			display: block;
+			width:100%;
+			font-size:7vw;
+		}
+	}
+	.visibol{
+		bottom: 0;
+	}
+}
+}
+/*Header*/
